@@ -1,25 +1,25 @@
 package com.example.springBootIA.handlers.queries;
 
-import com.example.springBootIA.handlers.AppointmentInMemoryStore;
+import com.example.springBootIA.persistence.repositories.AppointmentRepository;
 import org.springframework.stereotype.Component;
 
 @Component
 public class GetAppointmentByIdHandlerImpl implements GetAppointmentByIdHandler {
 
-    private final AppointmentInMemoryStore store;
+    private final AppointmentRepository repository;
 
-    public GetAppointmentByIdHandlerImpl(AppointmentInMemoryStore store) {
-        this.store = store;
+    public GetAppointmentByIdHandlerImpl(AppointmentRepository repository) {
+        this.repository = repository;
     }
 
     @Override
     public Result handle(Query query) {
-        return store.findById(query.id())
-                .map(appointment -> (Result) new Result.Found(
-                        appointment.id(),
-                        appointment.patientId(),
-                        appointment.dateTime(),
-                        appointment.reason()
+        return repository.findById(query.id())
+                .map(entity -> (Result) new Result.Found(
+                        entity.getId(),
+                        entity.getPatientId(),
+                        entity.getDateTime(),
+                        entity.getReason()
                 ))
                 .orElseGet(Result.NotFound::new);
     }
