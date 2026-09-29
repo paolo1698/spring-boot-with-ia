@@ -9,7 +9,8 @@ version = "0.0.1-SNAPSHOT"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(26)
+		// Cambiado a una versión estándar (21 o 17) para que funcione en el laboratorio
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
