@@ -2,7 +2,11 @@ spring:
   application:
     name: springBootIA
   datasource:
-    url: jdbc:h2:mem:appointments
+    url: jdbc:h2:file:./data/appointments
   h2:
     console:
       enabled: true
+  jpa.hibernate.ddl-auto: none
+  liquibase.change-log: classpath:db/changelog/db.changelog-master.yaml
+server:
+  port: 9090
