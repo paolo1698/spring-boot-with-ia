@@ -7,4 +7,5 @@ CREATE TABLE appointments (
     date_time TIMESTAMP NOT NULL,
     reason VARCHAR(255)
 );
+--Reason es opcional puede estar vacio, por eso no tiene NOT NULL
 --rollback DROP TABLE appointments;
