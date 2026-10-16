@@ -6,4 +6,6 @@ databaseChangeLog:
   - include:
       file: db/changelog/changes/003-create-patients.sql
   - include:
-      file: db/changelog/changes/004-add-duration.sql
+      file: db/changelog/changes/004-add-notes.sql
+  - include:
+      file: db/changelog/changes/005-add-duration.sql
