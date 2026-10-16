@@ -9,3 +9,5 @@ databaseChangeLog:
       file: db/changelog/changes/004-add-notes.sql
   - include:
       file: db/changelog/changes/005-add-duration.sql
+  - include:
+      file: db/changelog/changes/006-widen-reason.sql
