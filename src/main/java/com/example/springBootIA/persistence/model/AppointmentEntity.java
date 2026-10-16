@@ -1,6 +1,7 @@
 package com.example.springBootIA.persistence.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -18,6 +19,7 @@ public class AppointmentEntity {
 
     private UUID patientId;
     private LocalDateTime dateTime;
+    @Column(nullable = true)
     private String reason;
 
     // Constructor vacío requerido por JPA
