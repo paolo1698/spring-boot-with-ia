@@ -5,3 +5,5 @@ databaseChangeLog:
       file: classpath:db/changelog/changes/002-add-status.sql
   - include:
       file: db/changelog/changes/003-create-patients.sql
+  - include:
+      file: db/changelog/changes/004-add-duration.sql
