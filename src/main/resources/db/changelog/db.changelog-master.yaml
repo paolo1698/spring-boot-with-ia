@@ -3,3 +3,5 @@ databaseChangeLog:
       file: classpath:db/changelog/changes/001-create-appointments.sql
   - include:
       file: classpath:db/changelog/changes/002-add-status.sql
+  - include:
+      file: db/changelog/changes/003-create-patients.sql
